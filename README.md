@@ -2,11 +2,11 @@
 
 [ComfyUI](https://github.com/comfyanonymous/ComfyUI) + [LTX-Video](https://github.com/Lightricks/LTX-Video) / [Stable Video Diffusion (SVD-XT)](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt) を使い、画像を条件にした動画生成をローカルGPUで行うための補助スクリプト集。基本的なimg2video生成そのものは手元のClaude Codeスキル `image-to-video`(単一画像→動画の基本ワークフロー)に任せ、本リポジトリはそこに含まれない発展的な手法(長尺のマルチキーフレーム誘導、人物等を保護したままのimg2img)をまとめたもの。
 
-| 合成テスト画像(`test_image.png`) | 保護マスク(`protect_mask_sample.png`) |
+| アニメ調 | 実写調 |
 | --- | --- |
-| ![合成テスト画像](data/test_image.png) | ![保護マスク](data/protect_mask_sample.png) |
+| ![アニメ調のサンプル画像](assets/sample_anime.png) | ![実写調のサンプル画像](assets/sample_beach.png) |
 
-*どちらも`make_test_image.py`/`make_protect_mask.py`が描画した完全な合成画像(実在の人物・作品とは無関係)。マスク保護img2imgでは、白領域だけがプロンプトに従って変化し、黒領域(被写体)は元画像のまま保たれる。*
+*ローカルのStable Diffusionで生成した画像を、動画生成の入力例として使用(実在の人物・作品とは無関係)。マルチキーフレーム誘導・マスク保護img2imgは、こうした画像を起点に長尺動画やバリエーション生成を行う。*
 
 ## 動作環境
 
