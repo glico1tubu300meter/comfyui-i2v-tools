@@ -2,11 +2,11 @@
 
 [ComfyUI](https://github.com/comfyanonymous/ComfyUI) + [LTX-Video](https://github.com/Lightricks/LTX-Video) / [Stable Video Diffusion (SVD-XT)](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt) を使い、画像を条件にした動画生成をローカルGPUで行うための補助スクリプト集。基本的なimg2video生成そのものは手元のClaude Codeスキル `image-to-video`(単一画像→動画の基本ワークフロー)に任せ、本リポジトリはそこに含まれない発展的な手法(長尺のマルチキーフレーム誘導、人物等を保護したままのimg2img)をまとめたもの。
 
-| アニメ調(入力画像) | 実写調(入力画像) | 実写調 → 動画生成(SVD-XT) |
-| --- | --- | --- |
-| ![アニメ調のサンプル画像](assets/sample_anime.png) | ![実写調のサンプル画像](assets/sample_beach.png) | ![生成された動画](assets/sample_beach_generated.gif) |
+| 実写調(入力画像) | 実写調 → 動画生成(SVD-XT) |
+| --- | --- |
+| ![実写調のサンプル画像](assets/sample_beach.png) | ![生成された動画](assets/sample_beach_generated.gif) |
 
-*入力画像はローカルのStable Diffusionで生成(実在の人物・作品とは無関係)。右は実写調の画像をSVD-XTで動画化した結果(波が静かに満ちる短いループ)。マルチキーフレーム誘導・マスク保護img2imgは、こうした画像を起点に長尺動画やバリエーション生成を行う。*
+*入力画像はローカルのStable Diffusionで生成(実在の人物・作品とは無関係)。右はこの画像をSVD-XTで動画化した結果(波が静かに満ちる短いループ)。マルチキーフレーム誘導・マスク保護img2imgは、こうした画像を起点に長尺動画やバリエーション生成を行う。*
 
 ## 動作環境
 
